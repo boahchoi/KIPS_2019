@@ -1,0 +1,29 @@
+##2017학년도 2학기 클라우드컴퓨팅의 이해
+C17 <- read.csv("2017-2-cloud.csv")
+n_c17 <- c17 %>% select(total, major)
+t.test(total ~ major, data = n_c17, var.equal=TRUE)
+
+##2017학년도 2학기 클라우드컴퓨팅의 이해 (1학년)
+c17 <- read.csv("2017-2-cloud.csv")
+n_c17 <- c17[c17$grade <=1,] %>% select(total, major)
+t.test(total ~ major, data = n_c17, var.equal=TRUE)
+
+##2018학년도 2학기 클라우드컴퓨팅의 이해
+c18 <- read.csv("2018-2-cloud.csv")
+n_c18 <- c18 %>% select(total, major)
+t.test(total ~ major, data = n_c18, var.equal=TRUE)
+
+##2018학년도 2학기 클라우드컴퓨팅의 이해 (1학년)
+c18 <- read.csv("2018-2-cloud.csv")
+n_c18 <- c18[c18$grade <=1,] %>% select(total, major)
+t.test(total ~ major, data = n_c18, var.equal=TRUE)
+
+##2018 2학기 기초빅데이터분석 
+b18 <- read.csv("2018-2-bigdata.csv")
+n_b18 <- b18 %>% select(total, major)
+t.test(total ~ major, data = n_b18, var.equal=TRUE)
+
+##2018 2학기 기초빅데이터분석 (1학년)
+b18 <- read.csv("2018-2-bigdata.csv")
+n_b18 <- b18[b18$grade <=1,] %>% select(total, major)
+t.test(total ~ major, data = n_b18, var.equal=TRUE)
